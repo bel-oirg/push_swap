@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/30 00:00:14 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 22:34:21 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:50:10 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ static void	swap_arr(int *arr1, int *arr2)
 
 void	sort_arr(int *arr, int size)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	j = -1;
-	while(++j < size)
+	while (++j < size)
 	{
 		i = -1;
 		while (++i < size - 1 - j)

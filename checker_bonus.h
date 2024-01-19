@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 17:58:50 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 23:48:22 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:49:35 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,3 @@ char	*get_next_line(int fd);
 int		ft_strcmp(char *s1, char *s2);
 
 #endif
-

@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 23:46:49 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 23:47:25 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:51:20 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,12 @@ void	atoc(char *command, t_stack_node **a, t_stack_node **b)
 		write(1, "Error\n", 6);
 }
 
-void	ff(void)
-{
-	system("leaks checker");
-}
-
 int	main(int argc, char *argv[])
 {
 	t_stack_node	*a;
 	t_stack_node	*b;
 	char			*command;
 
-	// atexit(ff);
 	if (argc == 1)
 		return (0);
 	if (argc >= 2)
@@ -72,4 +66,3 @@ int	main(int argc, char *argv[])
 		write(1, "KO\n", 3);
 	my_malloc(0, 2);
 }
-

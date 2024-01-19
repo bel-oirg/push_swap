@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:59:26 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 20:28:39 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:50:41 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 # include <limits.h>
 # include <unistd.h>
 # include <stdbool.h>
-
-#include <stdio.h> //remove this
 
 # define ERR "Error\n"
 

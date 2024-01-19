@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 02:14:34 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 23:43:58 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:50:56 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,11 +52,6 @@ static void	push_swap(t_stack_node **a, t_stack_node **b)
 	small_on_top(a);
 }
 
-void	ff(void)
-{
-	system("leaks push_swap");
-}
-
 int	main(int argc, char *argv[])
 {
 	t_stack_node	*a;
@@ -64,7 +59,6 @@ int	main(int argc, char *argv[])
 	int				lst_size;
 	int				index;
 
-	// atexit(ff);
 	a = NULL;
 	b = NULL;
 	index = 0;
