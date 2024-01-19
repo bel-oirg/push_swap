@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 01:09:49 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 20:25:30 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 21:00:03 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	append_node(t_stack_node **a, int num)
 	t_stack_node	*node;
 	t_stack_node	*last;
 
-	(!a) && (write (2, ERR, 7), my_malloc(0, 0));
+	(!a) && (write (2, ERR, 6), my_malloc(0, 0));
 	node = my_malloc(sizeof(t_stack_node), 1);
-	(!node) && (write (2, ERR, 7), my_malloc(0, 0));
+	(!node) && (write (2, ERR, 6), my_malloc(0, 0));
 	node->value = num;
 	node->next = NULL;
 	if (!*a)

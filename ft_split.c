@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 23:58:29 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 18:11:30 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 21:00:43 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	**ft_split(char *s, char c)
 			s++;
 		split[k] = char_counter(s, c);
 		if (!split[k])
-			return (write(2, "Error on split\n", 16), my_malloc(0, 0), NULL);
+			return (write(2, ERR, 6), my_malloc(0, 0), NULL);
 		s += ft_strlen(split[k]);
 	}
 	split[k] = NULL;

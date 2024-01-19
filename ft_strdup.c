@@ -6,11 +6,11 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:12:25 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 18:13:20 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:11:39 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
 
 char	*ft_strdup(char *s1)
 {

@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 02:14:34 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 20:32:08 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:43:58 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	push_swap(t_stack_node **a, t_stack_node **b)
 	{
 		i = 0;
 		median = find_median(*a);
-		(median == INT_MAX) && (write(2, ERR, 7), exit(1), 0);
+		(median == INT_MAX) && (write(2, ERR, 6), my_malloc(0, 0), 0);
 		while (i < lst_len(*a))
 		{
 			if ((*a)->value < median)
@@ -52,6 +52,11 @@ static void	push_swap(t_stack_node **a, t_stack_node **b)
 	small_on_top(a);
 }
 
+void	ff(void)
+{
+	system("leaks push_swap");
+}
+
 int	main(int argc, char *argv[])
 {
 	t_stack_node	*a;
@@ -59,13 +64,16 @@ int	main(int argc, char *argv[])
 	int				lst_size;
 	int				index;
 
+	// atexit(ff);
+	a = NULL;
+	b = NULL;
 	index = 0;
 	if (argc == 1)
 		return (0);
 	if (argc >= 2)
 		argv = parsed(argv, argc);
 	if (init_stack(&a, argv))
-		return (write(2, ERR, 7), my_malloc(0, 0), -1);
+		return (write(2, ERR, 6), my_malloc(0, 0), -1);
 	lst_size = lst_len(a);
 	if (!is_sorted(a))
 		(lst_size == 2) && (sa(&a, 0), 0),
