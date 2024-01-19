@@ -6,13 +6,13 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 23:46:49 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 23:54:17 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:59:04 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
 
-void	atoc(char *command, t_stack_node **a, t_stack_node **b)
+int	atoc(char *command, t_stack_node **a, t_stack_node **b)
 {
 	if (!ft_strcmp(command, "ra\n"))
 		ra(a, 1);
@@ -37,7 +37,8 @@ void	atoc(char *command, t_stack_node **a, t_stack_node **b)
 	else if (!ft_strcmp(command, "ss\n"))
 		ss(a, b, 1);
 	else
-		write(2, "Error\n", 6);
+		return (1);
+	return (0);
 }
 
 int	main(int argc, char *argv[])
@@ -57,7 +58,8 @@ int	main(int argc, char *argv[])
 		command = get_next_line(0);
 		if (!command)
 			break ;
-		atoc(command, &a, &b);
+		if (atoc(command, &a, &b))
+			(free(command), write(2, ERR, 6), my_malloc(0, 0));
 		free(command);
 	}
 	if (is_sorted(a))
