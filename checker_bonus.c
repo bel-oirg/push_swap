@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 23:46:49 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 23:51:20 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/19 23:54:17 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	atoc(char *command, t_stack_node **a, t_stack_node **b)
 	else if (!ft_strcmp(command, "ss\n"))
 		ss(a, b, 1);
 	else
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 }
 
 int	main(int argc, char *argv[])
