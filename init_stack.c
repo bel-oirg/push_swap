@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 01:09:49 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 21:00:03 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/22 05:18:05 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	append_node(t_stack_node **a, int num)
 	t_stack_node	*node;
 	t_stack_node	*last;
 
-	(!a) && (write (2, ERR, 6), my_malloc(0, 0));
+	(!a) && (write(2, ERR, 6), my_malloc(0, 0));
 	node = my_malloc(sizeof(t_stack_node), 1);
-	(!node) && (write (2, ERR, 6), my_malloc(0, 0));
+	(!node) && (write(2, ERR, 6), my_malloc(0, 0));
 	node->value = num;
 	node->next = NULL;
 	if (!*a)
@@ -79,7 +79,7 @@ int	init_stack(t_stack_node **a, char *argv[])
 	return (0);
 }
 
-char	**parsed(char *argv[], int argc)
+char	**parsed(char *argv[])
 {
 	char	*spaced_args;
 	char	**micro_args;
@@ -87,8 +87,6 @@ char	**parsed(char *argv[], int argc)
 	int		spaced_index;
 	int		micro_index;
 
-	if (argc == 2)
-		return (ft_split(argv[1], ' '));
 	index = 0;
 	spaced_index = -1;
 	spaced_args = NULL;
@@ -96,6 +94,7 @@ char	**parsed(char *argv[], int argc)
 	{
 		micro_index = -1;
 		micro_args = ft_split(argv[index], ' ');
+		(!micro_args[0]) && (write(2, ERR, 6), my_malloc(0, 0));
 		while (micro_args[++micro_index])
 			spaced_args = ft_strjoin(ft_strjoin(spaced_args, " "),
 					micro_args[micro_index]);

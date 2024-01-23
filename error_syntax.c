@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 23:55:21 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 19:58:51 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/22 00:31:05 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,33 +42,3 @@ int	err_rep(t_stack_node *a, int num)
 	}
 	return (0);
 }
-
-// void	free_stack(t_stack_node **a, char *argv[])
-// {
-// 	t_stack_node	*next_node;
-
-// 	if (argv)
-// 		free_matrice(argv);
-// 	if (!a)
-// 		exit(1);
-// 	while (a && *a)
-// 	{
-// 		next_node = (*a)->next;
-// 		if (*a)
-// 			free(*a);
-// 		*a = NULL;
-// 		*a = next_node;
-// 	}
-// 	a = NULL;
-// }
-
-// void	free_matrice(char *argv[])
-// {
-// 	int	index;
-
-// 	index = -1;
-// 	if (!argv || !*argv)
-// 		return ;
-// 	while (argv[++index])
-// 		(free(argv[index]), argv[index] = NULL);
-// }

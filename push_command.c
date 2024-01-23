@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 05:42:46 by bel-oirg          #+#    #+#             */
-/*   Updated: 2023/12/24 13:15:51 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/23 02:01:49 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	push(t_stack_node **dest, t_stack_node **src)
 {
 	t_stack_node	*to_push;
 
-	if (!src)
+	if (!src || !*src)
 		return ;
 	to_push = *src;
 	*src = (*src)->next;

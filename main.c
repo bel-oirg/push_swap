@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 02:14:34 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/20 03:12:18 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/22 05:18:36 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ static void	push_swap(t_stack_node **a, t_stack_node **b)
 			if ((*a)->value < median)
 				pb(b, a, 0);
 			else
-				(ra(a, 0), i++);
+				(ra(a, 0));
+			i++;
 		}
 	}
 	tiny_sort(a);
@@ -65,7 +66,7 @@ int	main(int argc, char *argv[])
 	if (argc == 1)
 		return (0);
 	if (argc >= 2)
-		argv = parsed(argv, argc);
+		argv = parsed(argv);
 	if (init_stack(&a, argv))
 		return (write(2, ERR, 6), my_malloc(0, 0), -1);
 	lst_size = lst_len(a);

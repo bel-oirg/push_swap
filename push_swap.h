@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:59:26 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/19 23:50:41 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/22 05:18:55 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void			init_nodes(t_stack_node *a, t_stack_node *b);
 void			append_node(t_stack_node **a, int num);
 t_stack_node	*find_smallest(t_stack_node *a);
 int				init_stack(t_stack_node **a, char *argv[]);
-char			**parsed(char *argv[], int argc);
+char			**parsed(char *argv[]);
 //tiny_sort
 int				is_sorted(t_stack_node *a);
 void			tiny_sort(t_stack_node **a);

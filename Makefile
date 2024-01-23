@@ -6,7 +6,7 @@
 #    By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 17:36:40 by bel-oirg          #+#    #+#              #
-#    Updated: 2024/01/19 23:41:02 by bel-oirg         ###   ########.fr        #
+#    Updated: 2024/01/22 04:35:50 by bel-oirg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ my_malloc.c
 SRCS_B = ft_strcmp.c get_next_line.c get_next_line_utils.c
 
 CC = cc
-CFLAGS = -Wall -Wextra -Werror# -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror #-g# -fsanitize=address
 
 RM = rm -f
 
@@ -33,7 +33,7 @@ $(NAME) : $(SRCS) main.c push_swap.h
 
 bonus: $(NAME_B)
 
-$(NAME_B) : $(SRCS_B) $(SRC) checker_bonus.c checker_bonus.h
+$(NAME_B) : $(SRCS_B) $(SRCS) checker_bonus.c checker_bonus.h
 	$(CC) $(CFLAGS) $(SRCS_B) $(SRCS) checker_bonus.c -o checker
 
 clean: 
