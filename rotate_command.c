@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 18:49:52 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/22 05:14:10 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/27 21:05:49 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	rotate(t_stack_node **stack)
 {
 	t_stack_node	*last_node;
 
-	if (!stack || !*stack || lst_len(*stack) == 1)
+	if (!stack || !*stack || lst_len(*stack) <= 1)
 		return ;
 	last_node = find_last_node(*stack);
 	last_node->next = *stack;

@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 23:46:49 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/23 02:05:10 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/27 21:15:23 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,19 @@ static int	atoc2(char *command, t_stack_node **a, t_stack_node **b)
 	return (-1);
 }
 
-static int	controller(char *command, t_stack_node **a, t_stack_node **b)
+static int	controller(t_stack_node **a, t_stack_node **b)
 {
-	if ((!atoc1(command, a, b)) && (!atoc2(command, a, b)))
-		return (1);
+	char	*command;
+
+	while (1)
+	{
+		command = get_next_line(0);
+		if (!command)
+			break ;
+		if ((!atoc1(command, a, b)) && (!atoc2(command, a, b)))
+			(free(command), write(2, ERR, 6), my_malloc(0, 0));
+		free(command);
+	}
 	return (0);
 }
 
@@ -60,23 +69,16 @@ int	main(int argc, char *argv[])
 	t_stack_node	*a;
 	t_stack_node	*b;
 	int				len;
-	char			*command;
 
+	a = NULL;
+	b = NULL;
 	if (argc == 1)
 		return (0);
 	(argc >= 2) && (argv = parsed(argv), 0);
 	if (init_stack(&a, argv) == 1)
 		return (write(2, ERR, 6), my_malloc(0, 0), 0);
 	len = lst_len(a);
-	while (1)
-	{
-		command = get_next_line(0);
-		if (!command)
-			break ;
-		if (controller(command, &a, &b))
-			(free(command), write(2, ERR, 6), my_malloc(0, 0));
-		free(command);
-	}
+	controller(&a, &b);
 	if (lst_len(a) == len && is_sorted(a))
 		write(1, "OK\n", 3);
 	else

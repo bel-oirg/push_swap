@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 02:14:34 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/22 05:18:36 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:43:44 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,11 +58,9 @@ int	main(int argc, char *argv[])
 	t_stack_node	*a;
 	t_stack_node	*b;
 	int				lst_size;
-	int				index;
 
 	a = NULL;
 	b = NULL;
-	index = 0;
 	if (argc == 1)
 		return (0);
 	if (argc >= 2)

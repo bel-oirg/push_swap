@@ -6,7 +6,7 @@
 /*   By: bel-oirg <bel-oirg@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 21:31:39 by bel-oirg          #+#    #+#             */
-/*   Updated: 2024/01/22 04:35:11 by bel-oirg         ###   ########.fr       */
+/*   Updated: 2024/01/27 21:05:26 by bel-oirg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	swap(t_stack_node **a)
 {
-	if (!a || !*a || lst_len(*a) == 1)
+	if (!a || !*a || lst_len(*a) <= 1)
 		return ;
 	*a = (*a)->next;
 	(*a)->prev->prev = *a;
